@@ -47,7 +47,7 @@ Follow these steps to set up the project locally for testing:
     ```bash
     php artisan serve
     ```
-    Access the app at: [http://localhost:8000](http://localhost:8000)
+    Access the app at: [http://localhost:8000/login](http://localhost:8000/login/)
 
 ## Credentials (For Testing)
 

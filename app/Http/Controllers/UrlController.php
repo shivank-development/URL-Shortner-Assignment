@@ -23,9 +23,6 @@ class UrlController extends Controller
         $user = Auth::user();
 
         if ($user->isSuperAdmin()) {
-             // Basic requirement: "SuperAdmin cannot create short urls"
-             // But UI is hidden. If they hit POST directly, should we block?
-             // "SuperAdmin cannot create short urls" -> Yes, strict block.
              abort(403, 'SuperAdmin cannot create short URLs.');
         }
 

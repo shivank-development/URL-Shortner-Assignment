@@ -23,7 +23,6 @@ class InvitationController extends Controller
         return view('invitations.create_user');
     }
 
-    // SuperAdmin creates a new Company and its first Admin
     public function storeCompany(Request $request)
     {
         $request->validate([
@@ -45,7 +44,6 @@ class InvitationController extends Controller
         return back()->with('success', 'Company and Admin created successfully.');
     }
 
-    // Admin invites a new user to their company (Now generates a link)
     public function storeUser(Request $request)
     {
         $request->validate([
@@ -57,7 +55,6 @@ class InvitationController extends Controller
 
         if (!$user->isAdmin()) abort(403);
 
-        // Generate Signed URL
         $url = \Illuminate\Support\Facades\URL::temporarySignedRoute(
             'register', 
             now()->addDays(7), 
@@ -68,9 +65,6 @@ class InvitationController extends Controller
             ]
         );
 
-        // In a real app, we would Mail::to($request->email)->send(...);
-        // For this demo, we will just flash the link to the session.
-        
         return back()->with('success', 'Invitation Link Generated: ' . $url);
     }
 }

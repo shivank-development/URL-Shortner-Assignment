@@ -41,14 +41,12 @@ class UrlShortenerTest extends TestCase
 
         $response->assertSessionHas('success');
         
-        // Assert session contains a URL
         $url = session('success');
         $this->assertStringContainsString('Invitation Link Generated:', $url);
     }
 
     public function test_url_list_visibility_rules()
     {
-        // Setup scenarios
         $company1 = Company::factory()->create(['name' => 'Company A']);
         $company2 = Company::factory()->create(['name' => 'Company B']);
 
@@ -59,24 +57,20 @@ class UrlShortenerTest extends TestCase
         
         $superAdmin = User::factory()->create(['role' => 'SuperAdmin']);
 
-        // Create URLs
         Url::create(['original_url' => 'http://1.com', 'short_code' => 'AAAAAA', 'user_id' => $adminA->id, 'company_id' => $company1->id]);
         Url::create(['original_url' => 'http://2.com', 'short_code' => 'BBBBBB', 'user_id' => $memberA->id, 'company_id' => $company1->id]);
         Url::create(['original_url' => 'http://3.com', 'short_code' => 'CCCCCC', 'user_id' => $adminB->id, 'company_id' => $company2->id]);
 
-        // TEST MEMBER A: Should only see their own URL (urlA_Member)
         $respMember = $this->actingAs($memberA)->get('/dashboard');
         $respMember->assertSee('BBBBBB');
         $respMember->assertDontSee('AAAAAA');
         $respMember->assertDontSee('CCCCCC');
 
-        // TEST ADMIN A: Should see all Company A URLs (urlA_Admin, urlA_Member), but NOT Company B
         $respAdmin = $this->actingAs($adminA)->get('/dashboard');
         $respAdmin->assertSee('AAAAAA');
         $respAdmin->assertSee('BBBBBB');
         $respAdmin->assertDontSee('CCCCCC');
 
-        // TEST SUPER ADMIN: Should see ALL
         $respSuper = $this->actingAs($superAdmin)->get('/dashboard');
         $respSuper->assertSee('AAAAAA');
         $respSuper->assertSee('BBBBBB');

@@ -5,7 +5,7 @@ This is a **Laravel 11** based URL Shortener application with multi-tenancy (Sup
 ## Prerequisites
 - PHP >= 8.2
 - Composer
-- SQLite (Enabled in `php.ini`)
+- SQLite 
 
 ## Local Setup Instructions
 
@@ -53,8 +53,8 @@ Follow these steps to set up the project locally for testing:
 
 The database seeder creates a default **Super Admin** account:
 
--   **Email**: `super@example.com`
--   **Password**: `password`
+-   **Email**: 'super@example.com'
+-   **Password**: 'password'
 
 You can use this account to:
 1.  Invite new **Clients** (Company Admins).

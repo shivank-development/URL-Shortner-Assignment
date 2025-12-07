@@ -34,7 +34,7 @@ class RegisterController extends Controller
 
         $user = User::create([
             'name' => $request->name,
-            'email' => $request->email, // Should match signature, but for simplicity allowing overwrite if valid
+            'email' => $request->email, 
             'password' => Hash::make($request->password),
             'role' => $request->role,
             'company_id' => $request->company_id,

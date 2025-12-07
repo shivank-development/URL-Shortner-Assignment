@@ -44,11 +44,11 @@ Follow these steps to set up the project locally for testing:
       ```
 
 5.  **First Create directory**:
-6.  - Make a folder **URL-Shortner-Assignment**
+    - Make a folder **URL-Shortner-Assignment**
     - add all files in a folder
     - open the folder path in console
 
-5.  **Run the Application**:
+6.  **Run the Application**:
     ```bash
     php artisan serve
     ```

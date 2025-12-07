@@ -9,7 +9,6 @@ use App\Models\Company;
 
 class ManagementController extends Controller
 {
-    // SuperAdmin: List Clients
     public function clients()
     {
         $this->authorizeSuperAdmin();
@@ -19,15 +18,13 @@ class ManagementController extends Controller
         return view('management.clients', compact('companies'));
     }
 
-    // SuperAdmin: Delete Client
     public function destroyClient(Company $company)
     {
         $this->authorizeSuperAdmin();
-        $company->delete(); // Cascades to users and urls
+        $company->delete(); 
         return back()->with('success', 'Company deleted successfully.');
     }
 
-    // SuperAdmin & Admin: List All URLs
     public function urls(Request $request)
     {
         $user = Auth::user();
@@ -44,7 +41,6 @@ class ManagementController extends Controller
         return view('management.urls', compact('urls'));
     }
 
-    // Admin: List Team Members
     public function team()
     {
         $user = Auth::user();
@@ -57,7 +53,6 @@ class ManagementController extends Controller
         return view('management.team', compact('members'));
     }
 
-    // Admin: Remove Member
     public function destroyMember(User $member)
     {
         $user = Auth::user();

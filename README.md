@@ -1,5 +1,5 @@
 # URL Shortener Assignment 
-go on-- 'master' Branch
+# for code-- 'master' Branch
 This is a **Laravel 11** based URL Shortener application with multi-tenancy (SuperAdmin, Admin, Member roles) and separate workspaces for companies.
 
 ## Prerequisites

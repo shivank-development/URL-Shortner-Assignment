@@ -49,9 +49,9 @@ Follow these steps to set up the project locally for testing:
     - open the folder path in console
 
 6.  **Run the Application**:
-    ```bash
+    '''bash
     php artisan serve
-    ```
+    '''
     Access the app at: [http://localhost:8000/login](http://localhost:8000/login/)
 
 ## Credentials (For Testing)

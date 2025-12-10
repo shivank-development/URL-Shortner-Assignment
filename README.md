@@ -14,11 +14,12 @@ Follow these steps to set up the project locally for testing:
 1.  **Clone or Extract** the project to your local machine.
 
 2.  **Install Dependencies**:
-    ```bash
-    composer install
+     bash
+    ```
+     composer install
     ```
 
-3.  **Environment Setup**:
+4.  **Environment Setup**:
     - Copy the example environment file:
       '''bash
       cp .env.example .env
@@ -28,7 +29,7 @@ Follow these steps to set up the project locally for testing:
       php artisan key:generate
       '''
 
-4.  **Database Setup (SQLite)**:
+5.  **Database Setup (SQLite)**:
     - Ensure the SQLite database file exists.
     - **Windows (PowerShell)**:
       '''powershell
@@ -43,12 +44,12 @@ Follow these steps to set up the project locally for testing:
       php artisan migrate:fresh --seed
       '''
 
-5.  **First Create directory**:
+6.  **First Create directory**:
     - Make a folder **URL-Shortner-Assignment**
     - add all files in a folder
     - open the folder path in console
 
-6.  **Run the Application**:
+7.  **Run the Application**:
     '''bash
     php artisan serve
     '''

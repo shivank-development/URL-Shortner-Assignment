@@ -14,35 +14,35 @@ Follow these steps to set up the project locally for testing:
 1.  **Clone or Extract** the project to your local machine.
 
 2.  **Install Dependencies**:
-     bash
-    ```
+     
+    ```bash
      composer install
     ```
 
 4.  **Environment Setup**:
     - Copy the example environment file:
-      '''bash
+      ```bash
       cp .env.example .env
-      '''
+      ```
     - Generate the application key:
-      '''bash
+      ```bash
       php artisan key:generate
-      '''
+      ```
 
 5.  **Database Setup (SQLite)**:
     - Ensure the SQLite database file exists.
     - **Windows (PowerShell)**:
-      '''powershell
+      ```powershell
       New-Item -ItemType File -Force database/database.sqlite
-      '''
+      ```
     - **Linux/Mac/Git Bash**:
-      '''bash
+      ```bash
       touch database/database.sqlite
-      '''
+      ```
     - Run migrations and seed the database (creates default Super Admin):
-      '''bash
+      ```bash
       php artisan migrate:fresh --seed
-      '''
+      ```
 
 6.  **First Create directory**:
     - Make a folder **URL-Shortner-Assignment**
@@ -50,9 +50,9 @@ Follow these steps to set up the project locally for testing:
     - open the folder path in console
 
 7.  **Run the Application**:
-    '''bash
+    ```bash
     php artisan serve
-    '''
+    ```
     Access the app at: [http://localhost:8000/login](http://localhost:8000/login/)
 
 ## Credentials (For Testing)
@@ -71,9 +71,9 @@ You can use this account to:
 
 To run the automated feature tests (verifying Access Control and Logic):
 
-'''bash
+```bash
 php artisan test
-'''
+```
 
 ## Acknowledgments
 

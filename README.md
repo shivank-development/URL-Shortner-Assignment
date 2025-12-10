@@ -39,9 +39,9 @@ Follow these steps to set up the project locally for testing:
       touch database/database.sqlite
       '''
     - Run migrations and seed the database (creates default Super Admin):
-      ```bash
+      '''bash
       php artisan migrate:fresh --seed
-      ```
+      '''
 
 5.  **First Create directory**:
     - Make a folder **URL-Shortner-Assignment**

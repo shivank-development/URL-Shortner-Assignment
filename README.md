@@ -70,9 +70,9 @@ You can use this account to:
 
 To run the automated feature tests (verifying Access Control and Logic):
 
-```bash
+'''bash
 php artisan test
-```
+'''
 
 ## Acknowledgments
 

@@ -24,9 +24,9 @@ Follow these steps to set up the project locally for testing:
       cp .env.example .env
       '''
     - Generate the application key:
-      ```bash
+      '''bash
       php artisan key:generate
-      ```
+      '''
 
 4.  **Database Setup (SQLite)**:
     - Ensure the SQLite database file exists.

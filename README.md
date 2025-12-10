@@ -14,9 +14,9 @@ Follow these steps to set up the project locally for testing:
 1.  **Clone or Extract** the project to your local machine.
 
 2.  **Install Dependencies**:
-    ```bash
+    '''bash
     composer install
-    ```
+    '''
 
 3.  **Environment Setup**:
     - Copy the example environment file:

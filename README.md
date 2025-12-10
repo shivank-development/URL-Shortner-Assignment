@@ -31,9 +31,9 @@ Follow these steps to set up the project locally for testing:
 4.  **Database Setup (SQLite)**:
     - Ensure the SQLite database file exists.
     - **Windows (PowerShell)**:
-      ```powershell
+      '''powershell
       New-Item -ItemType File -Force database/database.sqlite
-      ```
+      '''
     - **Linux/Mac/Git Bash**:
       ```bash
       touch database/database.sqlite

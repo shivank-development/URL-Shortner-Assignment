@@ -20,9 +20,9 @@ Follow these steps to set up the project locally for testing:
 
 3.  **Environment Setup**:
     - Copy the example environment file:
-      ```bash
+      '''bash
       cp .env.example .env
-      ```
+      '''
     - Generate the application key:
       ```bash
       php artisan key:generate

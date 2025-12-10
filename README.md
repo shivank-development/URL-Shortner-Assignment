@@ -35,9 +35,9 @@ Follow these steps to set up the project locally for testing:
       New-Item -ItemType File -Force database/database.sqlite
       '''
     - **Linux/Mac/Git Bash**:
-      ```bash
+      '''bash
       touch database/database.sqlite
-      ```
+      '''
     - Run migrations and seed the database (creates default Super Admin):
       ```bash
       php artisan migrate:fresh --seed

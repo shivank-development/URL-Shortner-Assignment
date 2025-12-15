@@ -1,6 +1,6 @@
 # Sembark URL Shortener Assignment
 
-This is a **Laravel 11** based URL Shortener application with multi-tenancy (SuperAdmin, Admin, Member roles) and separate workspaces for companies.
+This is a **Laravel 11** based URL Shortener application with multi-tenancy ( SuperAdmin, Admin, Member roles ) and separate workspaces for companies.
 
 ## Prerequisites
 - PHP >= 8.2
